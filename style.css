@@ -37,7 +37,7 @@ input, select {
 }
 
 .hide {
-    /*display: none;*/
+    display: none;
 }
 
 .todo-container {
