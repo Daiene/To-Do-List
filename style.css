@@ -5,6 +5,7 @@
 }
 
 body{
+    font-family: "Roboto", sans-serif;
     background-color: rgb(23, 126, 154);
 }
 
@@ -40,7 +41,7 @@ input, select {
 }
 
 .todo-container {
-    background-color: white;
+    background-color: #ecf0f1;
     border-radius: 15px;
     width: 450px;
     margin: 3rem auto;
@@ -49,9 +50,13 @@ input, select {
 }
 
 .todo-container header {
-    text-align: center;
     padding: 0 1rem 1rem;
     border-bottom: 1px solid #CCC;
+}
+
+header > h1 {
+    padding-left: 16px;
+    border-left: 5px solid #e74c3c;
 }
 
 #todo-form, #edit-form {
@@ -125,7 +130,10 @@ input, select {
 
 .todo button {
     margin-left: 0.4rem;
-    border: 2px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
 }
 
 .done {
@@ -136,4 +144,14 @@ input, select {
     color: white;
     text-decoration: line-through;
     font-style: italic;
+}
+
+.done > button {
+    background-color: #395169;
+    color: #ecf0f1;
+}
+
+.done > button:hover {
+    background-color: white;
+    color: #102F5e;
 }
