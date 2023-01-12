@@ -134,6 +134,7 @@ header > h1 {
     width: 40px;
     height: 40px;
     border: none;
+    background: #ecf0f1;
 }
 
 .done {
@@ -146,12 +147,12 @@ header > h1 {
     font-style: italic;
 }
 
-.done > button {
+.todo button:hover, .done > button {
     background-color: #395169;
     color: #ecf0f1;
 }
 
 .done > button:hover {
-    background-color: white;
+    background-color: #ecf0f1;
     color: #102F5e;
 }
