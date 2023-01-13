@@ -8,7 +8,18 @@ const cancelEditBtn = document.querySelector("#cancel-edit-btn");
 
 let oldInputValue;
 
-// Funções
+
+todoForm.addEventListener("submit", (e) => {
+
+    e.preventDefault(); //faz com que o formulário não seja enviado para o backEnd quando precionar o botão
+
+    const inputValue = todoInput.value;
+
+    if (inputValue) {
+        saveTodo (inputValue);
+    }
+})
+
 const saveTodo = (text) => {
     const todo = document.createElement("div");
     todo.classList.add("todo");
@@ -37,38 +48,6 @@ const saveTodo = (text) => {
     todoInput.value="";
     todoInput.focus();
 }
-
-const toggleForms = () => {
-    editForm.classList.toggle("hide");
-    todoForm.classList.toggle("hide");
-    todoList.classList.toggle("hide");
-}
-
-const updateToDo = (text) => {
-    
-    const todos = document.querySelectorAll(".todo");
-
-    todos.forEach((todo) => {
-        
-        let todoTitle = todo.querySelector("h3");
-
-        if (todoTitle.innerText === oldInputValue) {
-            todoTitle.innerText = text;
-        }
-    })
-}
-
-// Eventos
-todoForm.addEventListener("submit", (e) => {
-
-    e.preventDefault(); //faz com que o formulário não seja enviado para o backEnd quando precionar o botão
-
-    const inputValue = todoInput.value;
-
-    if (inputValue) {
-        saveTodo (inputValue);
-    }
-})
 
 document.addEventListener("click", (e) => {
     const targetEl = e.target;
@@ -100,6 +79,12 @@ cancelEditBtn.addEventListener ("click", (e) => {
     toggleForms();
 })
 
+const toggleForms = () => {
+    editForm.classList.toggle("hide");
+    todoForm.classList.toggle("hide");
+    todoList.classList.toggle("hide");
+}
+
 editForm.addEventListener ("submit", (e) => {
     e.preventDefault();
 
@@ -111,3 +96,17 @@ editForm.addEventListener ("submit", (e) => {
 
     toggleForms();
 })
+
+const updateToDo = (text) => {
+    
+    const todos = document.querySelectorAll(".todo");
+
+    todos.forEach((todo) => {
+
+        let todoTitle = todo.querySelector("h3");
+
+        if (todoTitle.innerText === oldInputValue) {
+            todoTitle.innerText = text;
+        }
+    })
+}
