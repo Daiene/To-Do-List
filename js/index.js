@@ -45,9 +45,11 @@ const toggleForms = () => {
 }
 
 const updateToDo = (text) => {
-    const todos = document.querySelector(".todo");
+    
+    const todos = document.querySelectorAll(".todo");
 
     todos.forEach((todo) => {
+        
         let todoTitle = todo.querySelector("h3");
 
         if (todoTitle.innerText === oldInputValue) {
