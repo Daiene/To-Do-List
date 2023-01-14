@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -6,7 +8,22 @@
 
 body{
     font-family: "Roboto", sans-serif;
-    background-color: rgb(23, 126, 154);
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(54,132,223,1) 100%);
+}
+
+.date-hour {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem 1.5rem 1rem;
+    font-size: 16px;
+    font-family: 'EB Garamond', serif;
+    color: #102F5e;
+}
+
+#date {
+    flex: 1;
 }
 
 button {

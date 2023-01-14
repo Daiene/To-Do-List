@@ -1,4 +1,10 @@
 // Seleção de Elementos
+const data = new Date();
+const day = String(data.getDate()).padStart(2, '0');
+let dayName = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+let monName = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Agosto", "Outubro", "Novembro", "Dezembro"];
+const year = data.getFullYear();
+
 const todoForm = document.querySelector("#todo-form");
 const todoInput = document.querySelector("#todo-input");
 const todoList = document.querySelector("#todo-list");
@@ -8,6 +14,31 @@ const cancelEditBtn = document.querySelector("#cancel-edit-btn");
 
 let oldInputValue;
 
+
+document.getElementById("date").innerHTML = (dayName [data.getDay()] + ", " + day + " de " + monName [data.getMonth()] + " de " + year);
+
+function time () {
+    const data = new Date();
+    let h = data.getHours();
+    let m = data.getMinutes();
+    let s = data.getSeconds();
+
+    if(h<10) {
+        h = "0"+h;
+    }
+
+    if(m<10) {
+        m = "0"+m;
+    }
+
+    if(s<10) {
+        s = "0"+s;
+    }
+
+    document.getElementById("hour").innerHTML = h+":"+m+":"+s;
+    
+    setTimeout('time()',500);
+}
 
 todoForm.addEventListener("submit", (e) => {
 
