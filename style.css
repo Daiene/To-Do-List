@@ -12,6 +12,10 @@ body{
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(54,132,223,1) 100%);
 }
 
+main {
+    height: 78vh;
+}
+
 .date-hour {
     display: flex;
     justify-content: space-around;

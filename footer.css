@@ -1,0 +1,59 @@
+@-webkit-keyframes float {
+    0% {
+      -webkit-transform: translatey(0px);
+      transform: translatey(0px);
+    }
+  
+    50% {
+      -webkit-transform: translateY(-6px);
+      transform: translateY(-6px);
+    }
+  
+    100% {
+      -webkit-transform: translatey(0px);
+      transform: translatey(0px);
+    }
+  }
+  
+  .image-logo {
+    -webkit-animation: float 6s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
+  }
+
+footer {
+    background-color: rgba(255,255,255,0.6);
+}
+
+.container-footer {
+    color: black;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    padding: 20px;
+}
+
+.container-footer p {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid grey;
+    padding-bottom: 10px;
+}
+
+.nome-footer {
+    font-weight: bold;
+    color: rgb(57, 57, 104);
+}
+
+.imagens-contato {
+    place-items: center;
+    display: flex;
+    width: 200px;
+    height: 40px;
+}
+
+.imagens-contato .image-logo {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px 0;
+    cursor: pointer;
+}
